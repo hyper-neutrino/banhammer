@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.8.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.2.6"
+  }
+}
