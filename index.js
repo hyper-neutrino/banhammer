@@ -66,7 +66,7 @@ client.on("messageCreate", async (message) => {
             days = parseInt(d);
 
             if (isNaN(days)) {
-                days = undefined;
+                days = 0;
             } else if (days <= 0 || days > 7) {
                 return await message.reply(
                     "Purge days argument should be between 0 and 7."
