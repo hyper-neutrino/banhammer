@@ -14,11 +14,26 @@ process.on("uncaughtException", console.error);
 
 client.once("ready", () => {
     console.log("Banhammer is ready!");
+    update_guild_count();
 });
 
 const running = new Map();
 const max = new Map();
 const status = new Map();
+
+function update_guild_count() {
+    client.user.setPresence({
+        activities: [
+            {
+                type: "WATCHING",
+                name: `${client.guilds.cache.size} servers`,
+            },
+        ],
+    });
+}
+
+client.on("guildCreate", update_guild_count);
+client.on("guildDelete", update_guild_count);
 
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isButton()) {
