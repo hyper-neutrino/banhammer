@@ -99,7 +99,7 @@ client.on("messageCreate", async (message) => {
                         "`bh!allow <user / role>` - allow a user/role to use banhammer (default: admins only)\n" +
                         "`bh!deny <user / role>` - remove permission for a user/role to use banhammer (note: this does **not** block them, it just removes a previous override)\n" +
                         "`bh!list` - list all users/roles that are currently explicitly permitted to use banhammer\n\n" +
-                        "[Support Server](discord.gg/7TRKfSK7EU) (including bot updates/announcements channel)",
+                        "[Support Server](https://discord.gg/7TRKfSK7EU) (including bot updates/announcements channel)",
                     color: "009688",
                 },
             ],
