@@ -72,6 +72,7 @@ client.on("interactionCreate", async (interaction) => {
 });
 
 async function allowed(member) {
+    if (!member) return false;
     if (member.permissions.has("ADMINISTRATOR")) return true;
 
     const settings = await permissions.findOne({ guild: member.guild.id });
