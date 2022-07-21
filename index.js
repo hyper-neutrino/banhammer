@@ -411,7 +411,10 @@ client.on("messageCreate", async (message) => {
             try {
                 await message.guild.bans.create(id, { days, reason });
                 console.log(`Just banned ${id}.`);
-            } catch {
+            } catch (error) {
+                console.error(`Tried to ban ${id} but failed.`);
+                console.error(error);
+
                 failed.push(id);
             }
 
