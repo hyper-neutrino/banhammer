@@ -457,4 +457,12 @@ client.on("messageCreate", async (message) => {
     }
 });
 
+client.on("rateLimit", async (data) => {
+    console.error(
+        `RATELIMIT: [${data.method}] ${data.route} - ${
+            data.global ? "global" : "local"
+        } for ${data.timeout}ms`
+    );
+});
+
 client.login(config.discord_token);
